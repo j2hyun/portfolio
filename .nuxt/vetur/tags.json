@@ -1,0 +1,17 @@
+{
+  "Intro": {
+    "description": "Auto imported from components/Intro.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "Project": {
+    "description": "Auto imported from components/Project.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "Work": {
+    "description": "Auto imported from components/Work.vue"
+  }
+}

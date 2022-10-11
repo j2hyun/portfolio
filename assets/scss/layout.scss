@@ -1,0 +1,28 @@
+.ly {
+  &-wrap {
+    width: 100vw;
+  }
+  &-container {
+    width: 60%;
+    min-width: 800px;
+    margin: 0 auto;
+  }
+  &-intro {
+    padding-bottom: 200px;
+  }
+  &-section {
+    &-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $--color-black;
+    }
+    &-container {
+      padding-bottom: 60px;
+    }
+  }
+  &-chip-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+}

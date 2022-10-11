@@ -1,0 +1,60 @@
+$font-map-path: (
+  Pretendard: "../fonts/",
+) !default;
+
+// 폰트페밀리 및 파일 이름
+$font-map-Pretendard: (
+  Black: "Pretendard-Black",
+  ExtraBold: "Pretendard-ExtraBold",
+  Bold: "Pretendard-Bold",
+  SemiBold: "Pretendard-SemiBold",
+  Medium: "Pretendard-Medium",
+  Regular: "Pretendard-Regular",
+  ExtraLight: "Pretendard-ExtraLight",
+  Light: "Pretendard-Light",
+  Thin: "Pretendard-Thin",
+) !default;
+
+$font-Pretendard: map-get($font-map-Pretendard, Black) 900,
+  map-get($font-map-Pretendard, ExtraBold) 800,
+  map-get($font-map-Pretendard, Bold) 700,
+  map-get($font-map-Pretendard, SemiBold) 600,
+  map-get($font-map-Pretendard, Medium) 500,
+  map-get($font-map-Pretendard, Regular) 400,
+  map-get($font-map-Pretendard, Light) 300,
+  map-get($font-map-Pretendard, ExtraLight) 200,
+  map-get($font-map-Pretendard, Thin) 100;
+
+// font-face gen
+@each $name, $weight in $font-Pretendard {
+  $font-path: #{map-get($font-map-path, Pretendard)}#{$name};
+
+  @font-face {
+    src: url($font-path + ".otf") format("opentype");
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: $weight;
+  }
+}
+.ft {
+  &-color {
+    &-pink {
+      color: $--color-pink;
+    }
+    &-blue {
+      color: $--color-done;
+    }
+    &-green {
+      color: $--color-success;
+    }
+    &-yellow {
+      color: $--color-warning;
+    }
+    &-orange {
+      color: $--color-ready;
+    }
+    &-primary {
+      color: #302ea7;
+    }
+  }
+}

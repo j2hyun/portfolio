@@ -1,0 +1,102 @@
+html,
+body {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-size: $--font-size-small;
+}
+.title {
+  &-h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+  }
+  &-h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  &-h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  &-h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+.card {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding-top: 40px;
+  &-header {
+    flex: 0 0 290px;
+  }
+  &-container {
+    flex: 0 0 calc(100% - 300px);
+  }
+  &-desc {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+    &-content {
+      padding-top: 10px;
+      line-height: 1.5rem;
+    }
+  }
+}
+.chip {
+  display: inline-flex;
+  border-radius: 10px;
+  height: 20px;
+  padding: 0 8px;
+  font-size: 0;
+  color: $--color-white;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 4px;
+  i[class^="icon-"],
+  i[class*=" icon-"] {
+    font-size: $--font-size-normal;
+    display: inline-block;
+  }
+
+  span {
+    display: inline-block;
+    font-size: $--font-size-xsmall;
+    font-weight: 400;
+    letter-spacing: 0;
+    // vertical-align: middle;
+  }
+  &-default {
+    background-color: $--color-default;
+  }
+  &-info {
+    border: 1px solid $--color-default;
+    color: #777;
+  }
+}
+.icon {
+  &-logo {
+    &-html5,
+    &-react {
+      color: $--color-done;
+    }
+    &-css3 {
+      color: $--color-ready;
+    }
+    &-sass {
+      color: $--color-pink;
+    }
+    &-javascript {
+      color: $--color-warning;
+    }
+    &-vue {
+      color: $--color-success;
+    }
+  }
+}
+.color {
+  &-pink {
+    color: $--color-pink;
+  }
+}
