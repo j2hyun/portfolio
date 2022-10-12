@@ -5,7 +5,7 @@
     padding: 0 8px 0 6px;
     font-size: 0;
     max-width: 140px;
-    color: $--color-white;
+    color:$--color-white;
     box-sizing: border-box;
     align-items: center;
     gap: 4px;
@@ -55,5 +55,15 @@
 
     &-primary {
         background-color: $--color-primary;
+    }
+}
+@each $theme in dark, light {
+    .#{$theme}-mode {
+        .chip {
+            &-info{
+                border:1px solid map-deep-get($config, #{$theme}, "chip-default");
+                color:map-deep-get($config, #{$theme}, "chip-color");
+            }
+        }
     }
 }

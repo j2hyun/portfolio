@@ -5,12 +5,14 @@
     &:not(:first-child){
         padding-top:40px;
     }
-    @include mobile{
+    @include tablet{
         display: block;
     }
-
     &-header {
         flex: 0 0 300px;
+        @include tablet {
+            flex:none;
+        }
     }
 
     &-container {
@@ -22,6 +24,9 @@
         line-height: 1.5rem;
         overflow-wrap: break-word;
         white-space: pre-line;
+        @include tablet{
+            white-space: initial;
+        }
     }
 
     &-desc {
@@ -56,6 +61,7 @@
             }
         }
         @include mobile {
+            display: flex;
             & +.card{
                 margin-top:20px;
             }
@@ -72,6 +78,7 @@
             font-size: $--font-size-small;
         }
     }
+
 }
 @each $theme in dark,
 light {

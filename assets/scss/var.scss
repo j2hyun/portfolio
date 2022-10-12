@@ -63,11 +63,14 @@ $config: (
     backgroundColor: $--color-black_1E,
     color: $--color-white,
     card-backgroundColor__rounded:$--color-gray_2C,
-
+    chip-default:$--color-surface-2,
+    chip-color:$--color-default,
   ),
   light: (
     backgroundColor: $--color-white,
     color: $--color-black,
     card-backgroundColor__rounded:$--color-surface-1,
+    chip-default:$--color-surface-8,
+    chip-color:$--color-gray-7,
   ),
 );

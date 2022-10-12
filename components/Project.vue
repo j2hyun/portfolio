@@ -3,10 +3,12 @@
   <div class="card" v-for="(project, index) in projectList" :key="index">
     <div class="card-header">
       <h3 class="title-h3 card-title">{{project.title}}</h3>
-      <div class="period ly-pt-10"><span>{{project.startDate}}</span> ~ <span :class="`${project.endDate==='진행중'?'ft-color-primary ft-weight__medium':''}`">{{project.endDate}}</span></div>
-      <div class="ly-chip-group ly-pt-8">
-        <div :class="classObject(project.role)">
-          <span>{{project.role}}</span>
+      <div class="ly-card-desc">
+        <div class="period"><span>{{project.startDate}}</span> ~ <span :class="`${project.endDate==='진행중'?'ft-color-primary ft-weight__medium':''}`">{{project.endDate}}</span></div>
+        <div class="ly-chip-group ly-pt-8">
+          <div :class="classObject(project.role)">
+            <span>{{project.role}}</span>
+          </div>
         </div>
       </div>
     </div>

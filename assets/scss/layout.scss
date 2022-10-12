@@ -12,7 +12,6 @@
     @include tablet{
       width:100%;
       min-width: 345px;
-      min-width: initial;
     }
   }
   &-inner{
@@ -68,6 +67,25 @@
     }
     &-list{
       padding-top:10px;
+    }
+    &-desc{
+      padding-top:10px;
+      .ly-chip-group{
+        padding-top:8px;
+      }
+      @include tablet{
+        padding:8px 0 20px;
+        display:flex;
+        gap:6px;
+        align-items: center;
+        justify-content: flex-start;
+        .period{
+          order:2;
+        }
+        .ly-chip-group{
+          padding-top:0;
+        }
+      }
     }
   }
   &-switch{
