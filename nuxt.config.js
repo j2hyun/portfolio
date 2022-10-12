@@ -34,4 +34,11 @@ export default {
   styleResources: {
     scss: ["@/assets/scss/common/*.scss"],
   },
+  generate: {
+    dir: "docs",
+  },
+  target: "static",
+  router: {
+    base: "/portfolio/",
+  },
 };

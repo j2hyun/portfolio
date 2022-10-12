@@ -1,5 +1,5 @@
-export { default as Project } from '../../components/Project.vue'
-export { default as Skill } from '../../components/Skill.vue'
+export const Project = () => import('../../components/Project.vue' /* webpackChunkName: "components/project" */).then(c => wrapFunctional(c.default || c))
+export const Skill = () => import('../../components/Skill.vue' /* webpackChunkName: "components/skill" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
