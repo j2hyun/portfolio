@@ -1,0 +1,59 @@
+.chip {
+    display: inline-flex;
+    border-radius: 11px;
+    height: 22px;
+    padding: 0 8px 0 6px;
+    font-size: 0;
+    max-width: 140px;
+    color: $--color-white;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 4px;
+
+    i[class^="icon-"],
+    i[class*=" icon-"] {
+        font-size: $--font-size-normal;
+        display: inline-block;
+        transform: translateY(0.45px);
+    }
+
+    span {
+        display: inline-block;
+        font-size: $--font-size-xsmall;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    &-role {
+        padding: 0 6px;
+
+        span {
+            transform: translateY(0.2px);
+        }
+    }
+
+    &-default {
+        background-color: $--color-default;
+    }
+
+    &-info {
+        border: 1px solid $--color-default;
+        color: #777;
+    }
+
+    &-done {
+        background-color: $--color-done;
+    }
+
+    &-ready {
+        background-color: $--color-ready;
+    }
+
+    &-secondary {
+        background-color: $--color-secondary;
+    }
+
+    &-primary {
+        background-color: $--color-primary;
+    }
+}

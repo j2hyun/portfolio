@@ -9,5 +9,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Intro>` | `<intro>` (components/Intro.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Project>` | `<project>` (components/Project.vue)
+- `<Skill>` | `<skill>` (components/Skill.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<Work>` | `<work>` (components/Work.vue)

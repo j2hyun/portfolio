@@ -1,8 +1,9 @@
-export { default as Intro } from '../../components/Intro.vue'
-export { default as NuxtLogo } from '../../components/NuxtLogo.vue'
-export { default as Project } from '../../components/Project.vue'
-export { default as Tutorial } from '../../components/Tutorial.vue'
-export { default as Work } from '../../components/Work.vue'
+export { default as Intro } from '../..\\components\\Intro.vue'
+export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as Project } from '../..\\components\\Project.vue'
+export { default as Skill } from '../..\\components\\Skill.vue'
+export { default as Tutorial } from '../..\\components\\Tutorial.vue'
+export { default as Work } from '../..\\components\\Work.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

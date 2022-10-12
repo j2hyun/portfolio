@@ -1953,7 +1953,9 @@
 .icon-logo-octocat:before {
     content: "\ebfd";
 }
-
+.icon-logo-palette:before {
+    content: "\ea77";
+}
 .icon-logo-paypal:before {
     content: "\ebfe";
 }
@@ -3268,4 +3270,32 @@
 
 .icon-woman-sharp:before {
     content: "\ee33";
+}
+
+.icon {
+    &-logo {
+        &-html5 {
+            color: $--color-blue;
+        }
+
+        &-css3 {
+            color: $--color-orange;
+        }
+
+        &-sass {
+            color: $--color-pink;
+        }
+
+        &-javascript {
+            color: $--color-yellow;
+        }
+
+        &-vue {
+            color: $--color-green;
+        }
+
+        &-react {
+            color: $--color-skyBlue;
+        }
+    }
 }

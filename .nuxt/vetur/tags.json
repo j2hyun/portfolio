@@ -8,6 +8,9 @@
   "Project": {
     "description": "Auto imported from components/Project.vue"
   },
+  "Skill": {
+    "description": "Auto imported from components/Skill.vue"
+  },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
   },
