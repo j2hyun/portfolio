@@ -57,14 +57,14 @@ $font-Pretendard: map-get($font-map-Pretendard, Black) 900,
       color: $--color-primary;
     }
   }
-  &-weight{
-    &__light{
+  &-weight {
+    &__light {
       font-weight: 300;
     }
-    &__medium{
+    &__medium {
       font-weight: 500;
     }
-    &__bold{
+    &__bold {
       font-weight: 600;
     }
   }

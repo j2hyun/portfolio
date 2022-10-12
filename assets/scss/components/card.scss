@@ -1,90 +1,92 @@
 .card {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    &:not(:first-child){
-        padding-top:40px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  &:not(:first-child) {
+    padding-top: 40px;
+  }
+  @include tablet {
+    display: block;
+  }
+  &-header {
+    flex: 0 0 300px;
+    @include tablet {
+      flex: none;
     }
-    @include tablet{
-        display: block;
+  }
+
+  &-container {
+    flex: 0 0 calc(100% - 320px);
+  }
+
+  &-title {
+    width: 100%;
+    line-height: 1.5rem;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    @include tablet {
+      white-space: initial;
     }
-    &-header {
-        flex: 0 0 300px;
-        @include tablet {
-            flex:none;
-        }
+  }
+
+  &-desc {
+    &:not(:first-child) {
+      margin-top: 20px;
     }
 
-    &-container {
-        flex: 0 0 calc(100% - 320px);
+    &-content {
+      padding-top: 10px;
     }
 
-    &-title {
-        width: 100%;
-        line-height: 1.5rem;
-        overflow-wrap: break-word;
-        white-space: pre-line;
-        @include tablet{
-            white-space: initial;
-        }
+    &-detail {
+      width: 100%;
+      line-height: 1.5rem;
+      overflow-wrap: break-word;
+      white-space: pre-line;
+      transform: translateY(-15px);
     }
+  }
 
-    &-desc {
-        &:not(:first-child) {
-            margin-top: 20px;
-        }
-
-        &-content {
-            padding-top: 10px;
-        }
-
-        &-detail {
-            width: 100%;
-            line-height: 1.5rem;
-            overflow-wrap: break-word;
-            white-space: pre-line;
-            transform: translateY(-15px);
-        }
+  &__rounded {
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    gap: 0;
+    padding: 20px 15px !important;
+    .card {
+      &-header {
+        flex: 0 0 45%;
+      }
+      &-container {
+        flex: 0 0 55%;
+      }
     }
-
-    &__rounded {
-        border-radius: 5px;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-        gap:0;
-        padding:20px 15px !important;
-        .card{
-            &-header{
-                flex: 0 0 45%;
-            }
-            &-container{
-                flex: 0 0 55%;
-            }
+    @include mobile {
+      display: flex;
+      & + .card {
+        margin-top: 20px;
+      }
+      .card {
+        &-header {
+          flex: 0 0 50%;
         }
-        @include mobile {
-            display: flex;
-            & +.card{
-                margin-top:20px;
-            }
-            .card{
-                &-header{
-                    flex: 0 0 50%;
-                }
-            }
-        }
+      }
     }
-    &-list{
-        &-item{
-            line-height: 1.5rem;
-            font-size: $--font-size-small;
-        }
+  }
+  &-list {
+    &-item {
+      line-height: 1.5rem;
+      font-size: $--font-size-small;
     }
-
+  }
 }
-@each $theme in dark,
-light {
-    .#{$theme}-mode {
-        .card__rounded{
-            background-color:map-deep-get($config, #{$theme}, "card-backgroundColor__rounded");
-        }
+@each $theme in dark, light {
+  .#{$theme}-mode {
+    .card__rounded {
+      background-color: map-deep-get(
+        $config,
+        #{$theme},
+        "card-backgroundColor__rounded"
+      );
     }
+  }
 }

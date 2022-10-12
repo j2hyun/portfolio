@@ -6,14 +6,14 @@ $--font-size-large: 18px;
 $--theme-bg-page: "";
 // black
 $--color-black: #111;
-$--color-black_1E: #1E1E1E;
+$--color-black_1E: #1e1e1e;
 $--color-black_27: #272727;
 
 // gray
-$--color-gray_2C: #2C2C2C;
+$--color-gray_2C: #2c2c2c;
 $--color-gray_32: #323232;
 $--color-gray_39: #393939;
-$--color-gray_3F: #3F3F3F;
+$--color-gray_3F: #3f3f3f;
 $--color-gray_43: #434343;
 $--color-gray_49: #494949;
 $--color-gray_3: #333;
@@ -23,54 +23,60 @@ $--color-gray_6: #666;
 $--color-gray_7: #777;
 $--color-gray_8: #888;
 $--color-gray_9: #999;
-$--color-gray_A: #AAA;
-$--color-gray_D2:#D2D2D2;
+$--color-gray_A: #aaa;
+$--color-gray_D2: #d2d2d2;
 
 // white
 $--color-white: #fff;
 
 // surface
-$--color-surface-1:#F5F7FA;
-$--color-surface-2: #EFF1F6;
-$--color-surface-3: #E8ECF1;
-$--color-surface-4: #E2E6ED;
-$--color-surface-5: #DCE0E8;
-$--color-surface-6: #D6DAE4;
-$--color-surface-7: #CFD5DF;
-$--color-surface-8: #C9CFDB;
+$--color-surface-1: #f5f7fa;
+$--color-surface-2: #eff1f6;
+$--color-surface-3: #e8ecf1;
+$--color-surface-4: #e2e6ed;
+$--color-surface-5: #dce0e8;
+$--color-surface-6: #d6dae4;
+$--color-surface-7: #cfd5df;
+$--color-surface-8: #c9cfdb;
 
 // state
-$--color-secondary:#4b74c6;
-$--color-primary:#42C287;
+$--color-secondary: #4b74c6;
+$--color-primary: #42c287;
 $--color-default: #c4c5ce;
 $--color-info: #4c4c4c;
 $--color-done: #6acad1;
 $--color-success: #67c23a;
 $--color-danger: #f65858;
-$--color-ready: #FFB178;
+$--color-ready: #ffb178;
 $--color-warning: #f3e036;
 
 // color
-$--color-pink:#FF9182;
-$--color-green:$--color-primary;
-$--color-blue:$--color-secondary;
-$--color-yellow:$--color-warning;
-$--color-orange:$--color-ready;
-$--color-skyBlue:$--color-done;
+$--color-pink: #ff9182;
+$--color-green: $--color-primary;
+$--color-blue: $--color-secondary;
+$--color-yellow: $--color-warning;
+$--color-orange: $--color-ready;
+$--color-skyBlue: $--color-done;
 
 $config: (
   dark: (
     backgroundColor: $--color-black_1E,
     color: $--color-white,
-    card-backgroundColor__rounded:$--color-gray_2C,
-    chip-default:$--color-surface-2,
-    chip-color:$--color-default,
+    card-backgroundColor__rounded: $--color-gray_2C,
+    chip-default: $--color-gray_9,
+    chip-info: $--color-surface-2,
+    chip-color: $--color-default,
+    btn-backgroundColor: $--color-surface-1,
+    btn-color: $--color-black_1E,
   ),
   light: (
-    backgroundColor: $--color-white,
+    backgroundColor: $--color-surface-1,
     color: $--color-black,
-    card-backgroundColor__rounded:$--color-surface-1,
-    chip-default:$--color-surface-8,
-    chip-color:$--color-gray-7,
+    card-backgroundColor__rounded: $--color-surface-1,
+    chip-default: $--color-surface-8,
+    chip-info: $--color-surface-8,
+    chip-color: $--color-gray-7,
+    btn-backgroundColor: $--color-black_1E,
+    btn-color: $--color-surface-1,
   ),
 );

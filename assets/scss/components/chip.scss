@@ -1,69 +1,68 @@
 .chip {
-    display: inline-flex;
-    border-radius: 11px;
-    height: 22px;
-    padding: 0 8px 0 6px;
-    font-size: 0;
-    max-width: 140px;
-    color:$--color-white;
-    box-sizing: border-box;
-    align-items: center;
-    gap: 4px;
+  display: inline-flex;
+  border-radius: 11px;
+  height: 22px;
+  padding: 0 8px 0 6px;
+  font-size: 0;
+  max-width: 140px;
+  color: $--color-white;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 4px;
 
-    i[class^="icon-"],
-    i[class*=" icon-"] {
-        font-size: $--font-size-normal;
-        display: inline-block;
-        transform: translateY(0.45px);
-    }
+  i[class^="icon-"],
+  i[class*=" icon-"] {
+    font-size: $--font-size-normal;
+    display: inline-block;
+    transform: translateY(0.45px);
+  }
+
+  span {
+    display: inline-block;
+    font-size: $--font-size-xsmall;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  &-role {
+    padding: 0 6px;
 
     span {
-        display: inline-block;
-        font-size: $--font-size-xsmall;
-        font-weight: 400;
-        letter-spacing: 0;
+      transform: translateY(0.2px);
     }
+  }
 
-    &-role {
-        padding: 0 6px;
+  &-info {
+    border: 1px solid $--color-default;
+    color: #777;
+  }
 
-        span {
-            transform: translateY(0.2px);
-        }
-    }
+  &-done {
+    background-color: $--color-done;
+  }
 
-    &-default {
-        background-color: $--color-default;
-    }
+  &-ready {
+    background-color: $--color-ready;
+  }
 
-    &-info {
-        border: 1px solid $--color-default;
-        color: #777;
-    }
+  &-secondary {
+    background-color: $--color-secondary;
+  }
 
-    &-done {
-        background-color: $--color-done;
-    }
-
-    &-ready {
-        background-color: $--color-ready;
-    }
-
-    &-secondary {
-        background-color: $--color-secondary;
-    }
-
-    &-primary {
-        background-color: $--color-primary;
-    }
+  &-primary {
+    background-color: $--color-primary;
+  }
 }
 @each $theme in dark, light {
-    .#{$theme}-mode {
-        .chip {
-            &-info{
-                border:1px solid map-deep-get($config, #{$theme}, "chip-default");
-                color:map-deep-get($config, #{$theme}, "chip-color");
-            }
-        }
+  .#{$theme}-mode {
+    .chip {
+      &-default {
+        background-color: map-deep-get($config, #{$theme}, "chip-default");
+      }
+      &-info {
+        border: 1px solid map-deep-get($config, #{$theme}, "chip-info");
+        color: map-deep-get($config, #{$theme}, "chip-color");
+      }
     }
+  }
 }

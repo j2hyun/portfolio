@@ -1,16 +1,30 @@
 <template>
   <div class="ly-pt-40">
-    <div class="ly-intro">
-      <!-- <Intro /> -->
+    <div class="ly-title">
+      <h1 class="title-h1">
+        안녕하세요, 김지현입니다.<br />
+        기획과 디자인을 바탕으로 UI/UX를 구현함으로서 사용자에게 보다 접근과
+        사용이 편리한 화면을 제공하고자 합니다.
+      </h1>
     </div>
     <div class="ly-section">
-       <h2 class="title-h2 ly-section-header">이런 기술을 사용할수 있어요</h2>
-       <div class="ly-section-container">
-        <Skill :skillList="skillList"/>
-       </div>
+      <div class="ly-section-header">
+        <h2 class="title-h2">이런 기술을 사용할수 있어요</h2>
+      </div>
+      <div class="ly-section-container">
+        <Skill :skillList="skillList" />
+      </div>
     </div>
     <div class="ly-section">
-      <h2 class="title-h2 ly-section-header">이런 프로젝트 경험이 있어요</h2>
+      <div class="ly-section-header">
+        <h2 class="title-h2">
+          총
+          <span class="ft-color-primary ft-weight__bold">{{
+            this.projectList.length
+          }}</span
+          >건의 프로젝트 경험이 있어요
+        </h2>
+      </div>
       <div class="ly-section-container">
         <Project :projectList="projectList" />
       </div>
@@ -19,32 +33,33 @@
 </template>
 
 <script>
-import Intro from "../components/Intro.vue";
 import Project from "../components/Project.vue";
+import Skill from "../components/Skill.vue";
 export default {
-  components: { Intro, Project },
+  components: { Skill, Project },
   name: "IndexPage",
   data() {
     return {
-      skillList:[
+      skillList: [
         {
-          title:"Mark Up",
-          list:["HTML5"]
-        },{
-          title:"Style",
-          list:["CSS/CSS3","Scss","styled-component"]
-        },{
-          title:"Script",
-          list:["javascript","jQuery","React.js","Vue.js","Storybook.js"]
-        }
-
+          title: "Mark Up",
+          list: ["HTML5"],
+        },
+        {
+          title: "Style",
+          list: ["CSS/CSS3", "Scss", "styled-component"],
+        },
+        {
+          title: "Script",
+          list: ["javascript", "jQuery", "React.js", "Vue.js", "Storybook.js"],
+        },
       ],
       projectList: [
         {
           title: "LS E-Link 관제 시스템 구축",
           startDate: "2022.08.04",
           endDate: "진행중",
-          role: "단독진행",
+          role: "단독 진행",
           spec: [
             { icon: "html5", tech: "HTML5" },
             { icon: "css3", tech: "CSS" },
@@ -52,7 +67,8 @@ export default {
             { icon: "javascript", tech: "javascript" },
             { icon: "vue", tech: "Vue.js" },
           ],
-          detail:"Vue.js 개발환경에서 Vuetify UI 라이브러리 기반 디자인 커스텀 하여 전체 페이지 화면 구현\n모드 변경 스위치에 따라, 두가지의 테마 모드(라이트, 다크)변경 가능하도록 구현 작업\nCSS의 전처리기인 SCSS를 활용하여 스타일 작업\n레이아웃 샘플 가이드 작업 및 제공",
+          detail:
+            "Vue.js 개발환경에서 Vuetify UI 라이브러리 기반 디자인 커스텀 하여 전체 페이지 화면 구현\n모드 변경 스위치에 따라, 두가지의 테마 모드(라이트, 다크)변경 가능하도록 구현 작업\nCSS의 전처리기인 SCSS를 활용하여 스타일 작업\n레이아웃 샘플 가이드 작업 및 제공",
         },
         {
           title: "SK_렌터카 EV Park 시스템 구축",
@@ -66,7 +82,6 @@ export default {
             { icon: "javascript", tech: "javascript" },
             { icon: "react", tech: "React.js" },
             { icon: "javascript", tech: "Storybook.js" },
-
           ],
           detail:
             "React.js 개발환경에서 Material UI 라이브러리 기반 디자인 커스텀 작업\n조건에 따른 스타일 적용을 위해 styled-component 활용하여 작업\n협업을 위해 마크업 규칙 제공 및 안내\nStorybook.js를 활용하여 컴포넌트 활용 가이드 작업 및 제공",
