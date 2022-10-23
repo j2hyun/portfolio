@@ -40,19 +40,19 @@ $--color-surface-7: #cfd5df;
 $--color-surface-8: #c9cfdb;
 
 // state
+$--color-primary: #256af1;
 $--color-secondary: #4b74c6;
-$--color-primary: #42c287;
 $--color-default: #c4c5ce;
 $--color-info: #4c4c4c;
 $--color-done: #6acad1;
-$--color-success: #67c23a;
+$--color-success: #42c287;
 $--color-danger: #f65858;
 $--color-ready: #ffb178;
 $--color-warning: #f3e036;
 
 // color
 $--color-pink: #ff9182;
-$--color-green: $--color-primary;
+$--color-green: $--color-success;
 $--color-blue: $--color-secondary;
 $--color-yellow: $--color-warning;
 $--color-orange: $--color-ready;
@@ -64,8 +64,8 @@ $config: (
     color: $--color-white,
     card-backgroundColor__rounded: $--color-gray_2C,
     chip-default: $--color-gray_9,
-    chip-info: $--color-surface-2,
-    chip-color: $--color-default,
+    chip-info: $--color-gray_7,
+    chip-color: $--color-gray_A,
     btn-backgroundColor: $--color-surface-1,
     btn-color: $--color-black_1E,
   ),

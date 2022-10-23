@@ -49,6 +49,9 @@
       & > .card {
         flex: 0 0 32%;
         height: 150px;
+        @include tablet {
+          height: 162px;
+        }
       }
       @include mobile {
         display: block;
@@ -57,7 +60,7 @@
           width: 100%;
           height: auto;
           min-height: 100px;
-          max-height: 150px;
+          max-height: 140px;
         }
       }
     }

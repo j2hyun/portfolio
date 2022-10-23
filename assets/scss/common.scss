@@ -6,17 +6,15 @@ body {
 }
 .title {
   &-h1 {
-    font-size: 3rem;
-    font-weight: 500;
-    line-height: 3.5rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.25em;
     word-break: keep-all;
     @include tablet {
       font-size: 2.5rem;
-      line-height: 2.8rem;
     }
     @include mobile {
       font-size: 2rem;
-      line-height: 2.5rem;
     }
   }
   &-h2 {
