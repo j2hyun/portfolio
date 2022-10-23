@@ -6,8 +6,8 @@
     }
   }
   &-container {
-    width: 60%;
-    min-width: 820px;
+    width: 80%;
+    max-width: 1024px;
     margin: 0 auto;
     @include tablet {
       width: 100%;
