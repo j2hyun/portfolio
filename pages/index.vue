@@ -9,14 +9,6 @@
     </div>
     <div class="ly-section">
       <div class="ly-section-header">
-        <h2 class="title-h2">이런 기술을 사용할수 있어요</h2>
-      </div>
-      <div class="ly-section-container">
-        <Skill :skillList="skillList" />
-      </div>
-    </div>
-    <div class="ly-section">
-      <div class="ly-section-header">
         <h2 class="title-h2">
           총
           <span class="ft-color-primary ft-weight__bold">{{
@@ -27,6 +19,14 @@
       </div>
       <div class="ly-section-container">
         <Project :projectList="projectList" />
+      </div>
+    </div>
+    <div class="ly-section">
+      <div class="ly-section-header">
+        <h2 class="title-h2">이런 기술을 사용할수 있어요</h2>
+      </div>
+      <div class="ly-section-container">
+        <Skill :skillList="skillList" />
       </div>
     </div>
   </div>
