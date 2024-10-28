@@ -10,7 +10,14 @@
     <div class="ly-section">
       <div class="ly-section-header">
         <h2 class="title-h2">
-          총
+          현재는 핀크에서 프로젝트를 진행하고 있어요
+        </h2>
+      </div>
+    </div>
+    <div class="ly-section">
+      <div class="ly-section-header">
+        <h2 class="title-h2">
+          이전에는 총
           <span class="ft-color-primary ft-weight__bold">{{
             this.projectList.length
           }}</span
