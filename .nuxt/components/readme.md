@@ -8,3 +8,4 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Project>` | `<project>` (components/Project.vue)
 - `<Skill>` | `<skill>` (components/Skill.vue)
+- `<Tooltip>` | `<tooltip>` (components/Tooltip.vue)

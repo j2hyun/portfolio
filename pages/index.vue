@@ -3,14 +3,14 @@
     <div class="ly-title">
       <h1 class="title-h1">
         안녕하세요, 김지현입니다.<br />
-        기획과 디자인을 바탕으로 UI/UX를 구현함으로서 사용자에게 보다 접근과
+        기획과 디자인을 바탕으로 UI/UX를 구현함으로서 사용자에게 접근과
         사용이 편리한 화면을 제공하고자 합니다.
       </h1>
     </div>
     <div class="ly-section">
       <div class="ly-section-header">
         <h2 class="title-h2">
-          현재는 핀크에서 프로젝트를 진행하고 있어요
+          현재는 <Tooltip msg="하나금융지주 핀테크 자회사"><a href="https://www.finnq.com/" title="핀크" class="ft-color-purple">핀크</a></Tooltip>에서 프로젝트를 진행하고 있어요
         </h2>
       </div>
     </div>
@@ -42,8 +42,9 @@
 <script>
 import Project from "../components/Project.vue";
 import Skill from "../components/Skill.vue";
+import Tooltip from "../components/Tooltip.vue";
 export default {
-  components: { Skill, Project },
+  components: { Skill, Project, Tooltip },
   name: "IndexPage",
   data() {
     return {
@@ -65,7 +66,7 @@ export default {
         {
           title: "LS E-Link 관제 시스템 구축",
           startDate: "2022.08.04",
-          endDate: "진행중",
+          endDate: "2022.11.20",
           role: "단독 진행",
           spec: [
             { icon: "html5", tech: "HTML5" },

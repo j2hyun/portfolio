@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/j2hyun/Documents/projects/portfolio/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_f99f18d2"
+    "chunkName": "pages/index"
   }
 ]

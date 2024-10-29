@@ -4,5 +4,8 @@
   },
   "Skill": {
     "description": "Auto imported from components/Skill.vue"
+  },
+  "Tooltip": {
+    "description": "Auto imported from components/Tooltip.vue"
   }
 }

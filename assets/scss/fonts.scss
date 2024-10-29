@@ -39,22 +39,25 @@ $font-Pretendard: map-get($font-map-Pretendard, Black) 900,
 .ft {
   &-color {
     &-pink {
-      color: $--color-pink;
+      color: $--color-pink !important;
     }
     &-blue {
-      color: $--color-done;
+      color: $--color-done !important;
     }
     &-green {
-      color: $--color-success;
+      color: $--color-success !important;
     }
     &-yellow {
-      color: $--color-warning;
+      color: $--color-warning !important;
     }
     &-orange {
-      color: $--color-ready;
+      color: $--color-ready !important;
     }
     &-primary {
-      color: $--color-primary;
+      color: $--color-primary !important;
+    }
+    &-purple {
+      color: $--color-purple !important;
     }
   }
   &-weight {

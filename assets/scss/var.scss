@@ -40,8 +40,8 @@ $--color-surface-7: #cfd5df;
 $--color-surface-8: #c9cfdb;
 
 // state
-$--color-secondary: #4b74c6;
-$--color-primary: #42c287;
+$--color-primary: #4b74c6;
+$--color-secondary: #42c287;
 $--color-default: #c4c5ce;
 $--color-info: #4c4c4c;
 $--color-done: #6acad1;
@@ -52,11 +52,12 @@ $--color-warning: #f3e036;
 
 // color
 $--color-pink: #ff9182;
-$--color-green: $--color-primary;
-$--color-blue: $--color-secondary;
+$--color-green: $--color-secondary;
+$--color-blue: $--color-primary;
 $--color-yellow: $--color-warning;
 $--color-orange: $--color-ready;
 $--color-skyBlue: $--color-done;
+$--color-purple: #4d00b6;
 
 $config: (
   dark: (
