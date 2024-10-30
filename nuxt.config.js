@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    target: 'static',
     title: "portfolio",
     htmlAttrs: {
       lang: "ko",
