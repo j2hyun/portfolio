@@ -134,6 +134,10 @@ label:active:after {
   font-size: $--font-size-xsmall;
   color: $--color-gray_A;
 }
+
+.border-none {
+  border: none;
+}
 @each $theme in dark, light {
   .#{$theme}-mode {
     .btn-top {

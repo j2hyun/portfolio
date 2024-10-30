@@ -29,3 +29,30 @@
     border-left: 7px solid transparent;
   }
 }
+@each $theme in dark, light {
+  .#{$theme}-mode {
+    .ly-tooltip {
+      a{
+        color: map-deep-get(
+                        $config,
+                        #{$theme},
+                        "color-finnq"
+        );
+      }
+    }
+    .tooltip {
+      background-color: map-deep-get(
+                      $config,
+                      #{$theme},
+                      "color-finnq"
+      );
+      &::after{
+        border-top-color: map-deep-get(
+                        $config,
+                        #{$theme},
+                        "color-finnq"
+        );
+      }
+    }
+  }
+}

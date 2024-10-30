@@ -10,8 +10,11 @@
     <div class="ly-section">
       <div class="ly-section-header">
         <h2 class="title-h2">
-          현재는 <Tooltip msg="하나금융지주 핀테크 자회사"><a href="https://www.finnq.com/" title="핀크" class="ft-color-purple">핀크</a></Tooltip>에서 프로젝트를 진행하고 있어요
+          현재는 <Tooltip msg="하나금융지주 핀테크 자회사"><a href="https://www.finnq.com/" title="핀크">핀크</a></Tooltip>에서 프로젝트를 진행하고 있어요
         </h2>
+      </div>
+      <div class="ly-section-container">
+        <Project :project-list="currentProjects" />
       </div>
     </div>
     <div class="ly-section">
@@ -19,21 +22,23 @@
         <h2 class="title-h2">
           이전에는 총
           <span class="ft-color-primary ft-weight__bold">{{
-            this.projectList.length
+            this.preProjects.length
           }}</span
           >건의 프로젝트 경험이 있어요
         </h2>
       </div>
       <div class="ly-section-container">
-        <Project :projectList="projectList" />
+        <Project :project-list="preProjects" />
       </div>
     </div>
     <div class="ly-section">
-      <div class="ly-section-header">
+      <div class="ly-section-header border-none">
         <h2 class="title-h2">이런 기술을 사용할수 있어요</h2>
       </div>
       <div class="ly-section-container">
-        <Skill :skillList="skillList" />
+        <SkillChip :skills="skills"/>
+<!--        <Skill :skillList="skillList" />-->
+
       </div>
     </div>
   </div>
@@ -62,7 +67,146 @@ export default {
           list: ["javascript", "jQuery", "React.js", "Vue.js", "Storybook.js"],
         },
       ],
-      projectList: [
+      skills:[
+        { icon: "html5", tech: "HTML5" },
+        { icon: "css3", tech: "CSS/CSS3" },
+        { icon: "sass", tech: "Scss" },
+        { icon: "palette", tech: "styled-component" },
+        { icon: "javascript", tech: "javascript" },
+        { icon: "vue", tech: "Vue.js" },
+        { icon: "react", tech: "React.js" },
+      ],
+      currentProjects:[
+        {
+          title: "리얼리",
+          subTitle: "금융 SNS ‘리얼리’는 익명의 유저들이 금융 데이터로 챌린지를 통해 리워드도 받고 서로의 금융 포트폴리오도 엿볼 수 있는 마이데이터 기반의 서비스",
+          startDate: "2023.01.30",
+          endDate: "진행중",
+          role: "단독 진행",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "vue", tech: "Vue.js" },
+          ],
+          detail:
+              "공통 시스템 컴포넌트 기반 리얼리 디자인 및 기획 요건에 맞게 커스텀 진행하여 화면 구현\n" +
+              "2.0 개편 이후 코드리뷰를 통해 불필요한 소스 정리, 가독성에 초점을 맞춰 개선 진행하여 소스 품질을 높임\n"+
+              "월별 및 이벤트 챌린지 화면 구현, 짧은 배포주기 대응\n"+
+              "사용자의 경험을 극대화 하기 위해 기획 및 디자인 파트와 협업하여 인터랙션 구현 및 제공\n"+
+              "'코리아 핀테크 위크 2024' 행사 참여 키오스크 화면 구현"
+        },
+        {
+          title: "디자인 시스템",
+          startDate: "2023.01",
+          endDate: "진행중",
+          role: "리더",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "vue", tech: "Vue.js" },
+            { icon: "react", tech: "React.js" },
+            { icon: "javascript", tech: "Storybook.js" },
+          ],
+          asis: "일관성 없는 컨벤션 규칙, 중첩 및 산발적인 지역 관리로 인한\n재사용성 및 유지보수 효율성이 낮음",
+          tobe: "공통 컴포넌트 작업을 통해 재 생산성 증대, 소스의 일관성 제공 및 규칙 정립",
+          detail: "디자인 시스템 제작 및 운영 경험을 살려 디자인 시스템 구축 리딩 진행\n" +
+                  "아토믹 디자인 패턴을 활용한 Code Component 표준 및 규격화 진행\n"+
+                  "MonoRepo 환경을 통해 하나의 StyleSheet로 Vue.js, React.js SPA 프레임워크 별 디자인 시스템 컴포넌트 제작\n " +
+                  "Storybook.js를 활용하여 컴포넌트 활용 가이드 작업 및 제공"
+        },
+        {
+          title: "핀크 홈페이지",
+          startDate: "2022.12",
+          endDate: "진행중",
+          role: "팀원",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "palette", tech: "styled-component" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "react", tech: "React.js" },
+          ],
+          detail:
+              "서비스별 유지 보수 진행\n" +
+              "PC, Mobile 반응형 화면 수정 및 웹 표준 반영 작업\n" +
+              "'안심신고' 보이스피싱 대응 안내 화면 구현 및 제공\n"
+        },
+        {
+          title: "비상금대출",
+          startDate: "24.05.23",
+          endDate: "24.06.04",
+          role: "단독 진행",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "vue", tech: "Vue.js" },
+          ],
+          detail:
+              "스마트 저축은행 '똑똑 대출' 온라인 설명의무 추가 화면 구현 및 FE개발\n" +
+              "똑똑 대출 전체 프로세스 확인 및 운영 FE개발 이슈 10건 개선\n"+
+              "금융소비자 보호법으로 인한 화면별 수정"
+        },
+        {
+          title: "대환 대출, 대출 비교 웹",
+          startDate: "23.05.15",
+          endDate: "24.05.02",
+          role: "단독 진행",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "vue", tech: "Vue.js" },
+          ],
+          detail:
+              "공통 시스템 컴포넌트 기반 디자인 및 기획 요건에 맞게 커스텀 진행하여 개편 화면 구현 및 제공\n" +
+              "제휴사에서 접근 가능한 별도의 웹인 '대출 비교 웹'을 서비스 개편에 맞추어 PC, Mobile 반응형으로 화면 구현 및 제공\n"+
+              "일부 제휴사 대출비교 조회 프로세스별 프로모션 노출 게이트 및 프로모션 화면 화면 구현 및 FE개발 \n"+
+              "제휴사 요구에 따른 화면 개선 대응"
+        },
+        {
+          title: "주택담보대출",
+          startDate: "23.11.02",
+          endDate: "24.02.20",
+          role: "단독 진행",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "vue", tech: "Vue.js" },
+          ],
+          detail:
+              "공통 시스템 컴포넌트 기반 디자인 및 기획 요건에 맞게 커스텀 진행하여 화면 구현\n" +
+              "프로모션 페이지 PC, Mobile 반응형 작업\n"+
+              "제휴사 요구에 따른 화면 개선 대응\n"
+        },
+        {
+          title: "예적금",
+          startDate: "23.01.11",
+          endDate: "23.01.27",
+          role: "단독 진행",
+          spec: [
+            { icon: "html5", tech: "HTML5" },
+            { icon: "css3", tech: "CSS" },
+            { icon: "sass", tech: "Scss" },
+            { icon: "javascript", tech: "javascript" },
+            { icon: "react", tech: "React.js" },
+          ],
+          detail:
+              "공통 스타일 처리 및 컴포넌트 작성을 통해 생산성 증대\n" +
+              "디자인 요구에 따른 인터렉션 구현 및 제공"
+        },
+
+      ],
+      preProjects: [
         {
           title: "LS E-Link 관제 시스템 구축",
           startDate: "2022.08.04",

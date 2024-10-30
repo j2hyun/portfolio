@@ -2,6 +2,8 @@ $--font-size-xsmall: 12px;
 $--font-size-small: 14px;
 $--font-size-normal: 16px;
 $--font-size-large: 18px;
+$--font-size-xlarge: 22px;
+$--font-size-xxlarge: 26px;
 
 $--theme-bg-page: "";
 // black
@@ -64,20 +66,30 @@ $config: (
     backgroundColor: $--color-black_1E,
     color: $--color-white,
     card-backgroundColor__rounded: $--color-gray_2C,
+    card-help-backgroundColor: #47494e,
+    card-help-color:#9eaeb6,
     chip-default: $--color-gray_9,
     chip-info: $--color-surface-2,
+          chip-done: #559da2,
+          chip-secondary: #339b6b,
     chip-color: $--color-default,
     btn-backgroundColor: $--color-surface-1,
     btn-color: $--color-black_1E,
+    color-finnq: #8370f8,
   ),
   light: (
     backgroundColor: $--color-surface-1,
     color: $--color-black,
     card-backgroundColor__rounded: $--color-surface-1,
+    card-help-backgroundColor: #f1f3f4,
+    card-help-color:#818b8f,
     chip-default: $--color-surface-8,
     chip-info: $--color-surface-8,
+          chip-done: $--color-done,
+          chip-secondary: $--color-secondary,
     chip-color: $--color-gray-7,
     btn-backgroundColor: $--color-black_1E,
     btn-color: $--color-surface-1,
+    color-finnq: $--color-purple,
   ),
 );

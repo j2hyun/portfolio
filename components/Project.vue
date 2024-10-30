@@ -13,6 +13,10 @@
       </div>
     </div>
     <div class="card-container">
+      <div class="card-help" v-if="project.subTitle">
+        <i class="icon-alert-circle"></i>
+        <p>{{project.subTitle}}</p>
+      </div>
       <div class="card-desc">
         <h4 class="title-h4">Tech Spec</h4>
         <div class="card-desc-content">
@@ -22,8 +26,20 @@
               <span>{{spec.tech}}</span>
             </li>
           </ul>
-          </div>
         </div>
+      </div>
+      <div class="card-desc" v-if="project.asis">
+        <h4 class="title-h4">As-Is</h4>
+        <div class="card-desc-detail">
+          {{project.asis}}
+        </div>
+      </div>
+      <div class="card-desc" v-if="project.tobe">
+        <h4 class="title-h4">To-Be</h4>
+        <div class="card-desc-detail">
+          {{project.tobe}}
+        </div>
+      </div>
       <div class="card-desc">
         <h4 class="title-h4">What I did</h4>
         <div class="card-desc-detail">
