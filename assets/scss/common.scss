@@ -48,6 +48,20 @@ body {
     font-size: $--font-size-xsmall;
     font-weight: 500;
   }
+  &-underline {
+    position:relative;
+    &::after{
+      content:"";
+      display: inline-block;
+      width:100%;
+      height: 2px;
+      clear: both;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      background-color: $--color-purple;
+    }
+  }
 }
 input[type="checkbox"] {
   height: 0;
@@ -117,6 +131,10 @@ label:active:after {
 .footer {
   font-size: $--font-size-xsmall;
   color: $--color-gray_A;
+}
+
+.border-none {
+  border: none;
 }
 @each $theme in dark, light {
   .#{$theme}-mode {

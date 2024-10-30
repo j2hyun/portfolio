@@ -28,7 +28,25 @@
       white-space: initial;
     }
   }
-
+  &-help {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 10px 15px;
+    //border:1px solid #dee8ee;
+    background-color: #f1f3f4;
+    color: #818b8f;
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    i[class^="icon-"]{
+      color: #9eaeb6;
+      padding:2px 0;
+    }
+    p {
+      word-break: keep-all;
+    }
+  }
   &-desc {
     &:not(:first-child) {
       margin-top: 20px;
@@ -40,31 +58,11 @@
 
     &-detail {
       width: 100%;
-      &-list {
-        margin-top: 10px;
-        @include tablet {
-          margin-top: 5px;
-        }
-      }
-      &-item {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 10px;
-        line-height: 1.5rem;
-        font-size: 0.875rem;
-        &::before {
-          content: "";
-          display: inline-block;
-          width: 4px;
-          height: 4px;
-          border-radius: 100%;
-          clear: both;
-        }
-        @include mobile {
-          font-size: 0.75rem;
-        }
-      }
+      line-height: 1.5rem;
+      overflow-wrap: break-word;
+      white-space: pre-line;
+      transform: translateY(-15px);
+      word-break: keep-all;
     }
   }
 
@@ -98,36 +96,27 @@
       line-height: 1.5rem;
       font-size: $--font-size-small;
     }
-    @include tablet {
-      padding-top: 8px;
-      &-item {
-        font-size: $--font-size-xsmall;
-      }
-    }
-    @include mobile {
-      padding-top: 0;
-      transform: translateY(-5px);
-    }
   }
 }
 @each $theme in dark, light {
   .#{$theme}-mode {
-    .card {
-      &-desc {
-        &-detail {
-          &-item {
-            &::before {
-              background-color: map-deep-get($config, #{$theme}, "color");
-            }
-          }
-        }
-      }
-    }
     .card__rounded {
       background-color: map-deep-get(
         $config,
         #{$theme},
         "card-backgroundColor__rounded"
+      );
+    }
+    .card-help {
+      background-color: map-deep-get(
+                      $config,
+                      #{$theme},
+                      "card-help-backgroundColor"
+      );
+      color: map-deep-get(
+                      $config,
+                      #{$theme},
+                      "card-help-color"
       );
     }
   }
