@@ -1,0 +1,14 @@
+{
+  "Project": {
+    "description": "Auto imported from components/Project.vue"
+  },
+  "Skill": {
+    "description": "Auto imported from components/Skill.vue"
+  },
+  "SkillChip": {
+    "description": "Auto imported from components/SkillChip.vue"
+  },
+  "Tooltip": {
+    "description": "Auto imported from components/Tooltip.vue"
+  }
+}

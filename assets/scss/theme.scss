@@ -1,0 +1,6 @@
+@each $theme in dark, light {
+  .#{$theme}-mode {
+    background-color: map-deep-get($config, #{$theme}, "backgroundColor");
+    color: map-deep-get($config, #{$theme}, "color");
+  }
+}
