@@ -8,7 +8,7 @@ exports.modules = {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Project.vue?vue&type=template&id=53ae1f5a&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Project.vue?vue&type=template&id=4821ff8b&
 var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
@@ -16,17 +16,15 @@ var render = function render() {
   return _c('div', {
     staticClass: "ly-card"
   }, [_vm._ssrNode(_vm._ssrList(_vm.projectList, function (project, index) {
-    return "<div class=\"card\"><div class=\"card-header\"><h3 class=\"title-h3 card-title\">" + _vm._ssrEscape(_vm._s(project.title)) + "</h3> <div class=\"ly-card-desc\"><div class=\"period\"><span>" + _vm._ssrEscape(_vm._s(project.startDate)) + "</span> ~\n          <span" + _vm._ssrClass(null, `${project.endDate === '진행중' ? 'ft-color-primary ft-weight__medium' : ''}`) + ">" + _vm._ssrEscape(_vm._s(project.endDate)) + "</span></div> <div class=\"ly-chip-group ly-pt-8\"><div" + _vm._ssrClass(null, _vm.classObject(project.role)) + "><span>" + _vm._ssrEscape(_vm._s(project.role)) + "</span></div></div></div></div> <div class=\"card-container\"><div class=\"card-desc\"><h4 class=\"title-h4\">Tech Spec</h4> <div class=\"card-desc-content\"><ul class=\"ly-chip-group\">" + _vm._ssrList(project.spec, function (spec, index) {
+    return "<div class=\"card\"><div class=\"card-header\"><h3 class=\"title-h3 card-title\">" + _vm._ssrEscape(_vm._s(project.title)) + "</h3> <div class=\"ly-card-desc\"><div class=\"period\"><span>" + _vm._ssrEscape(_vm._s(project.startDate)) + "</span> ~ <span" + _vm._ssrClass(null, `${project.endDate === '진행중' ? 'ft-color-primary ft-weight__medium' : ''}`) + ">" + _vm._ssrEscape(_vm._s(project.endDate)) + "</span></div> <div class=\"ly-chip-group ly-pt-8\"><div" + _vm._ssrClass(null, _vm.classObject(project.role)) + "><span>" + _vm._ssrEscape(_vm._s(project.role)) + "</span></div></div></div></div> <div class=\"card-container\">" + (project.subTitle ? "<div class=\"card-help\"><i class=\"icon-alert-circle\"></i> <p>" + _vm._ssrEscape(_vm._s(project.subTitle)) + "</p></div>" : "<!---->") + " <div class=\"card-desc\"><h4 class=\"title-h4\">Tech Spec</h4> <div class=\"card-desc-content\"><ul class=\"ly-chip-group\">" + _vm._ssrList(project.spec, function (spec, index) {
       return "<li class=\"chip chip-info\"><i" + _vm._ssrClass(null, `icon-logo-${spec.icon}`) + "></i> <span>" + _vm._ssrEscape(_vm._s(spec.tech)) + "</span></li>";
-    }) + "</ul></div></div> <div class=\"card-desc\"><h4 class=\"title-h4\">What I did</h4> <div class=\"card-desc-detail\"><ul class=\"card-desc-detail-list\">" + _vm._ssrList(project.detail, function (item, index) {
-      return "<li class=\"card-desc-detail-item\"><span>" + _vm._ssrEscape("\n                " + _vm._s(item) + "\n              ") + "</span></li>";
-    }) + "</ul></div></div></div></div>";
+    }) + "</ul></div></div> " + (project.asis ? "<div class=\"card-desc\"><h4 class=\"title-h4\">As-Is</h4> <div class=\"card-desc-detail\">" + _vm._ssrEscape("\n          " + _vm._s(project.asis) + "\n        ") + "</div></div>" : "<!---->") + " " + (project.tobe ? "<div class=\"card-desc\"><h4 class=\"title-h4\">To-Be</h4> <div class=\"card-desc-detail\">" + _vm._ssrEscape("\n          " + _vm._s(project.tobe) + "\n        ") + "</div></div>" : "<!---->") + " <div class=\"card-desc\"><h4 class=\"title-h4\">What I did</h4> <div class=\"card-desc-detail\">" + _vm._ssrEscape("\n          " + _vm._s(project.detail) + "\n        ") + "</div></div></div></div>";
   }))]);
 };
 
 var staticRenderFns = [];
 
-// CONCATENATED MODULE: ./components/Project.vue?vue&type=template&id=53ae1f5a&
+// CONCATENATED MODULE: ./components/Project.vue?vue&type=template&id=4821ff8b&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./components/Project.vue?vue&type=script&lang=js&
 /* harmony default export */ var Projectvue_type_script_lang_js_ = ({
@@ -90,7 +88,7 @@ var component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "ad5bddfa"
+  "77c38872"
   
 )
 
