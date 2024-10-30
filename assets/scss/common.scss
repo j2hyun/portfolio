@@ -1,0 +1,146 @@
+html,
+body {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-size: $--font-size-small;
+}
+.title {
+  &-h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.25em;
+    word-break: keep-all;
+    @include tablet {
+      font-size: 3rem;
+    }
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+  &-h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+  &-h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+  &-h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}
+.txt {
+  &-caption {
+    color: $--color-primary;
+    font-size: $--font-size-xsmall;
+    font-weight: 500;
+  }
+  &-underline {
+    position:relative;
+    &::after{
+      content:"";
+      display: inline-block;
+      width:100%;
+      height: 2px;
+      clear: both;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      background-color: $--color-purple;
+    }
+  }
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 35px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 20px;
+  position: relative;
+  font-size: 0;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 15px;
+  height: 15px;
+  background: $--color-white;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: $--color-primary;
+}
+
+input:checked + label:after {
+  left: calc(100% - 2.5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 15px;
+}
+.btn-top {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  background-color: $--color-black_1E;
+  color: $--color-white;
+  box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.05);
+  .icon {
+    display: inline-block;
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-54%, -55%);
+  }
+}
+
+.footer {
+  font-size: $--font-size-xsmall;
+  color: $--color-gray_A;
+}
+
+.border-none {
+  border: none;
+}
+@each $theme in dark, light {
+  .#{$theme}-mode {
+    .btn-top {
+      background-color: map-deep-get($config, #{$theme}, "btn-backgroundColor");
+      color: map-deep-get($config, #{$theme}, "btn-color");
+    }
+  }
+}
