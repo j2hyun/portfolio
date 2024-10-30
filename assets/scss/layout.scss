@@ -1,0 +1,102 @@
+.ly {
+  &-wrap {
+    width: 100%;
+    @include tablet {
+      min-width: 375px;
+    }
+  }
+  &-container {
+    width: 60%;
+    min-width: 820px;
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+      min-width: 345px;
+    }
+  }
+  &-inner {
+    @include tablet {
+      padding: 0 15px;
+    }
+  }
+  &-title {
+    padding-bottom: 200px;
+    @include tablet {
+      padding-bottom: 80px;
+    }
+  }
+  &-section {
+    &-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $--color-gray_D2;
+    }
+    &-container {
+      padding: 20px 0 80px;
+    }
+  }
+  &-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  &-card {
+    &-group {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      & > .card {
+        flex: 0 0 32%;
+        height: 150px;
+      }
+      @include mobile {
+        display: block;
+        & > .card {
+          flex: none;
+          width: 100%;
+          height: auto;
+          min-height: 100px;
+          max-height: 150px;
+        }
+      }
+    }
+    &-header {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $--color-gray_D2;
+    }
+    &-list {
+      padding-top: 10px;
+    }
+    &-desc {
+      padding-top: 10px;
+      .ly-chip-group {
+        padding-top: 8px;
+      }
+      @include tablet {
+        padding: 8px 0 20px;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: flex-start;
+        .period {
+          order: 2;
+        }
+        .ly-chip-group {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  &-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  &-footer {
+    padding: 20px 15px;
+  }
+}

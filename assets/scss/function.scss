@@ -1,0 +1,100 @@
+/*
+    ******************************************************************************
+    theme mode function
+    ******************************************************************************
+*/
+@function setStyle($map, $object, $style) {
+    @if map-has-key($map, $object) {
+        @return map-get(map-get($map, $object), $style);
+    }
+
+    @warn "The key ´#{$object} is not available in the map.";
+    @return null;
+}
+
+/// Map deep get
+/// @author Kitty Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+
+    @return $map;
+}
+
+/*
+    ******************************************************************************
+    spacing function (margin, padding)
+    ******************************************************************************
+*/
+@function size($start, $end) {
+    $size : ();
+
+    @for $i from $start through $end {
+        $value : $i + 0;
+        $size : append($size, $value);
+    }
+
+    @return $size;
+}
+
+//값이 0일때는 0으로,그 외에는 'px' 을 붙여줍니다. ex) 0=>0, 10=>10px
+@function getPx($value) {
+    @if $value ==0 {
+        @return $value;
+    }
+
+    @else {
+        @return ($value)+px;
+    }
+}
+
+// px값은 0 ~ 100 까지 
+$size : size(0, 100);
+
+/**
+  margin과 padding의 각 위치를 지정해주는 map 입니다.
+  key는 class이름 생성시 쓰이며 value는 상세 속성 정의시 쓰입니다.
+*/
+$position : ('l':'left', 'r':'right', 't':'top', 'b':'bottom');
+
+/**
+  margin과 padding 생성을 위한 map입니다.
+  key는 class이름 생성시 쓰이며 value는 상세 속성 정의시 쓰입니다.
+*/
+$nameMap : ('ly-m':'margin', 'ly-p':'padding');
+
+/**
+  실제 css class를 만들어주는 mixin입니다.
+  nameMap, position, size를 혼합하여 아래와 같은 형식으로 만들어줍니다.
+  
+  ex>
+  px-m-0 : { margin : 0; }
+  px-mt-1 : { margin-top : 1px; }
+*/
+@mixin generate($nameMap : (), $position : (), $size : ()) {
+
+    @each $preKey,
+    $preValue in $nameMap {
+        @each $px in $size {
+            .#{$preKey}-#{$px} {
+                #{$preValue}: getPx($px);
+            }
+
+            @each $sufKey,
+            $sufValue in $position {
+                .#{$preKey}#{$sufKey}-#{$px} {
+                    #{$preValue}-#{$sufValue}: getPx($px);
+                }
+            }
+        }
+    }
+}
+
+
+@include generate($nameMap, $position, $size);

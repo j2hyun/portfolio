@@ -1,0 +1,58 @@
+.ly-tooltip {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+}
+.tooltip {
+  display: inline-block;
+  background: $--color-purple;
+  font-size: 16px;
+  color: $--color-white;
+  padding:10px 16px;
+  width: 202px;
+  border-radius: 16px;
+  position: absolute;
+  left: -20px;
+  top: -50px;
+  font-weight: 500;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    bottom: -15px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid $--color-purple;
+    border-bottom: 8px solid transparent;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+}
+@each $theme in dark, light {
+  .#{$theme}-mode {
+    .ly-tooltip {
+      a{
+        color: map-deep-get(
+                        $config,
+                        #{$theme},
+                        "color-finnq"
+        );
+      }
+    }
+    .tooltip {
+      background-color: map-deep-get(
+                      $config,
+                      #{$theme},
+                      "color-finnq"
+      );
+      &::after{
+        border-top-color: map-deep-get(
+                        $config,
+                        #{$theme},
+                        "color-finnq"
+        );
+      }
+    }
+  }
+}
