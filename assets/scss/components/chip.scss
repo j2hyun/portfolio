@@ -52,10 +52,30 @@
   &-primary {
     background-color: $--color-primary;
   }
+  &.-large {
+    height:52px;
+    padding: 0 18px 0 16px;
+    border-radius: 26px;
+    max-width: 300px;
+    gap: 10px;
+    i[class^="icon-"],
+    i[class*=" icon-"] {
+      font-size: $--font-size-xlarge;
+    }
+    span {
+      font-size: $--font-size-xxlarge;
+    }
+  }
 }
 @each $theme in dark, light {
   .#{$theme}-mode {
     .chip {
+      &-secondary {
+        background-color: map-deep-get($config, #{$theme}, "chip-secondary");
+      }
+      &-done {
+        background-color: map-deep-get($config, #{$theme}, "chip-done");
+      }
       &-default {
         background-color: map-deep-get($config, #{$theme}, "chip-default");
       }
